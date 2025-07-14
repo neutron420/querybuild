@@ -94,10 +94,10 @@ const TestimonialsConveyor = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              What Our Customers Say
+              What Our Developers Say
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Don&apos;t just take our word for it - hear from our satisfied customers
+              Don&apos;t just take our word for it - hear from our satisfied Developers
             </p>
           </div>
 

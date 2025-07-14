@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'QueryBuild',
-  description: 'Transform your ideas into beautiful digital experiences.',
+  description: 'Transform your Database ideas in digital experiences.',
 }
 
 export default function RootLayout({

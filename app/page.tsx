@@ -14,8 +14,8 @@ export default function HomePage() {
       <HeroSection
         title="Welcome To QueryBuild"
         subtitle={{
-          regular: "Transform your ideas into ",
-          gradient: "beautiful digital experiences",
+          regular: "Transform your Database Ideas into ",
+          gradient: " into digital experiences",
         }}
         description="Transform your ideas into reality with our comprehensive suite of development tools and resources."
         ctaText="Get Started"
