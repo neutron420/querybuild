@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/blocks/hero-section-dark";
 import DatabaseWithRestApi from "@/components/ui/database-with-rest-api";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { GlowingEffectDemo } from "@/components/ui/glowing-effect-demo";
+import TestimonialsConveyor from "@/components/blocks/testimonials";
 
 export default function HomePage() {
   return (
@@ -95,6 +96,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section - Last Section */}
+      <TestimonialsConveyor />
     </main>
   );
 }
