@@ -1,7 +1,10 @@
 // app/page.tsx
 "use client";
+
 import { HeroSection } from "@/components/blocks/hero-section-dark";
 import DatabaseWithRestApi from "@/components/ui/database-with-rest-api";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { GlowingEffectDemo } from "@/components/ui/glowing-effect-demo";
 
 export default function HomePage() {
   return (
@@ -41,8 +44,8 @@ export default function HomePage() {
           
           {/* Centered DatabaseWithRestApi Component */}
           <div className="flex justify-center items-center">
-            <div className="p-8 rounded-xl bg-zinc-900/50 border border-zinc-800">
-              <DatabaseWithRestApi 
+            <div className="relative">
+              <DatabaseWithRestApi
                 className="mx-auto"
                 title="Data exchange using a customized REST API"
                 circleText="SVG"
@@ -58,7 +61,37 @@ export default function HomePage() {
                 }}
                 lightColor="#00A6F5"
               />
+              
+              {/* GlowingEffect with minimal styling */}
+              <GlowingEffect
+                blur={20}
+                inactiveZone={0.3}
+                proximity={100}
+                spread={30}
+                variant="default"
+                glow={true}
+                disabled={false}
+                movementDuration={1.5}
+                borderWidth={2}
+              />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GlowingEffect Demo Grid Section */}
+      <section className="py-20 px-4 bg-zinc-950 min-h-screen flex items-center justify-center">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-12 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Interactive Features</h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
+              Experience our cutting-edge interface with dynamic glowing effects
+            </p>
+          </div>
+          
+          {/* GlowingEffectDemo Component */}
+          <div className="px-4">
+            <GlowingEffectDemo />
           </div>
         </div>
       </section>

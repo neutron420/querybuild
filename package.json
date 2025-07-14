@@ -12,6 +12,7 @@
     "@clerk/nextjs": "^6.24.0",
     "@clerk/themes": "^2.2.55",
     "@google/generative-ai": "^0.24.1",
+    "@motionone/dom": "^10.18.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.3",
