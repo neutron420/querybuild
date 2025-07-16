@@ -14,6 +14,7 @@ interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   description?: string
   ctaText?: string
   ctaHref?: string
+  ctaOnClick?: () => void // Added this prop
   bottomImage?: {
     light: string
     dark: string
@@ -70,6 +71,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
       description = "Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.",
       ctaText = "Browse courses",
       ctaHref = "#",
+      ctaOnClick, // Added this prop
       bottomImage = {
         light: "https://farmui.vercel.app/dashboard-light.png",
         dark: "https://farmui.vercel.app/dashboard.png",
@@ -85,6 +87,13 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
     },
     ref,
   ) => {
+    const handleClick = (e: React.MouseEvent) => {
+      if (ctaOnClick) {
+        e.preventDefault()
+        ctaOnClick()
+      }
+    }
+
     return (
       <div className={cn("relative z-10", className)} ref={ref} {...props}>
         {/* 🌌 Enhanced Black Gradient Background */}
@@ -136,7 +145,8 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <div className="inline-flex h-full w-full items-center justify-center rounded-full bg-black text-xs font-medium backdrop-blur-3xl">
                     <a
-                      href={ctaHref}
+                      href={ctaOnClick ? "#" : ctaHref}
+                      onClick={handleClick}
                       className="inline-flex items-center justify-center rounded-full border border-white/20 bg-gradient-to-tr from-white/5 via-purple-400/20 to-transparent text-white hover:from-white/10 hover:via-purple-400/30 transition-all py-4 px-10 text-sm sm:w-auto"
                     >
                       {ctaText}
