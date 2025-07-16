@@ -1,4 +1,4 @@
-// app/page.tsx
+
 "use client";
 
 import { HeroSection } from "@/components/blocks/hero-section-dark";
