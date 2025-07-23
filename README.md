@@ -28,7 +28,7 @@
 
 ## 📋 Table of Contents
 
-**[Overview](#-overview)** • **[Features](#-features)** • **[Tech Stack](#-tech-stack)** • **[Getting Started](#-getting-started)** • **[Usage](#-usage)** • **[API Reference](#-api-reference)** • **[Contributing](#-contributing)** • **[License](#-license)** • **[Contact](#-contact)**
+**[Overview](#-overview)** • **[Features](#-features)** • **[Tech Stack](#-tech-stack)** • **[Getting Started](#-getting-started)** • **[Usage](#-usage)** • **[Contributing](#-contributing)** • **[License](#-license)** • **[Contact](#-contact)**
 
 <br/>
 
