@@ -1,13 +1,22 @@
+<div align="center">
+
 # QueryBuild 🚀
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Next.js-15-black?logo=next.js&logoColor=white" alt="Next.js">
-  <img src="https://img.shields.io/badge/TypeScript-5-blue?logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
-  <img src="https://img.shields.io/badge/Clerk-Auth-6C47FF?logo=clerk&logoColor=white" alt="Clerk">
-  <img src="https://img.shields.io/badge/Google_Gemini-AI-4285F4?logo=google&logoColor=white" alt="Google Gemini">
+<br/>
+
+<div>
+  <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js">
+  <img src="https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+  <img src="https://img.shields.io/badge/Clerk-Auth-6C47FF?style=for-the-badge&logo=clerk&logoColor=white" alt="Clerk">
+  <img src="https://img.shields.io/badge/Google_Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Gemini">
 </div>
-<p align="center">
+
+<br/>
+
+**Transform your database ideas into digital reality. QueryBuild is an AI-powered application that allows you to generate complete, well-structured database schemas and essential CRUD operations simply by describing your needs in natural language.**
+
+<p>
   <a href="#-about-the-project">About</a> •
   <a href="#-getting-started">Getting Started</a> •
   <a href="#-usage">Usage</a> •
@@ -15,9 +24,9 @@
   <a href="#-license">License</a>
 </p>
 
-**Transform your database ideas into digital reality. QueryBuild is an AI-powered application that allows you to generate complete, well-structured database schemas and essential CRUD operations simply by describing your needs in natural language.**
-
 [**Live Demo (link to your deployed project)**] · [**Report a Bug**] · [**Request a Feature**]
+
+</div>
 
 ## 🌟 About The Project
 
@@ -123,7 +132,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
 
-Project Link: [https://github.com/neutron420/querybuild](https://github.com/your_username/querybuild)
+Project Link: [https://github.com/your_username/querybuild](https://github.com/your_username/querybuild)
 
 ## 🙏 Acknowledgments
 
