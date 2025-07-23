@@ -1,8 +1,5 @@
-// lib/ai-client.ts
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
-
-// Define a type for the expected AI response structure for better type safety.
 interface AiResponse {
   schema: unknown;
   diagram: string;
