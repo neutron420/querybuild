@@ -1,143 +1,351 @@
-<div align="center">
-
 # QueryBuild 🚀
 
-<br/>
+*AI-Powered Database Schema Generator*
 
-<div>
-  <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js">
-  <img src="https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
-  <img src="https://img.shields.io/badge/Clerk-Auth-6C47FF?style=for-the-badge&logo=clerk&logoColor=white" alt="Clerk">
-  <img src="https://img.shields.io/badge/Google_Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Gemini">
-</div>
+<div align="center">
 
-<br/>
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Clerk](https://img.shields.io/badge/Clerk-Auth-6C47FF?style=for-the-badge&logo=clerk&logoColor=white)](https://clerk.com/)
+[![Google Gemini](https://img.shields.io/badge/Google_Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
 
-**Transform your database ideas into digital reality. QueryBuild is an AI-powered application that allows you to generate complete, well-structured database schemas and essential CRUD operations simply by describing your needs in natural language.**
+**Transform your database ideas into production-ready schemas**
 
-<p>
-  <a href="#-about-the-project">About</a> •
-  <a href="#-getting-started">Getting Started</a> •
-  <a href="#-usage">Usage</a> •
-  <a href="#-contributing">Contributing</a> •
-  <a href="#-license">License</a>
-</p>
+*QueryBuild leverages Google's Gemini AI to generate complete database schemas, visual diagrams, and CRUD operations from natural language descriptions.*
 
-[**Live Demo (link to your deployed project)**] · [**Report a Bug**] · [**Request a Feature**]
+[**🌐 Live Demo**](https://your-demo-link.com) • [**📖 Documentation**](https://your-docs-link.com) • [**🐛 Report Bug**](https://github.com/your-username/querybuild/issues) • [**💡 Request Feature**](https://github.com/your-username/querybuild/issues)
 
 </div>
 
-## 🌟 About The Project
+---
 
-QueryBuild is designed to accelerate the database design process for developers. By leveraging the power of Google's Gemini AI, it interprets user requirements and automatically generates the necessary assets to get a database up and running quickly. This includes visual diagrams, SQL code for multiple database systems, and modern ORM schemas.
+## 📋 Table of Contents
 
-### ✨ Key Features
+- [Overview](#-overview)
+- [Features](#-features)
+- [Screenshots](#-screenshots)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
+- [Usage](#-usage)
+- [API Reference](#-api-reference)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Contact](#-contact)
 
-* **AI-Powered Schema Generation:** Describe your application's data needs in plain English and let our AI do the heavy lifting.
-* **Multi-Database Support:** Generates schemas for PostgreSQL, MySQL, and MongoDB.
-* **Prisma ORM Integration:** Automatically creates a ready-to-use Prisma schema.
-* **Visual ER Diagrams:** Instantly visualizes your database structure with Mermaid.js entity-relationship diagrams.
-* **CRUD Operation Scaffolding:** Generates boilerplate Create, Read, Update, and Delete (CRUD) SQL statements for each table.
-* **Interactive UI:** A clean, intuitive interface built for a seamless user experience.
+## 🎯 Overview
 
-### 🛠️ Built With
+QueryBuild revolutionizes database design by eliminating the tedious process of manual schema creation. Simply describe your application's data requirements in plain English, and our AI-powered engine generates:
 
-This project is built with a modern, robust tech stack:
+- **Complete database schemas** for multiple database systems
+- **Visual ER diagrams** for better understanding
+- **Ready-to-use CRUD operations** 
+- **Modern ORM configurations** (Prisma)
 
-* **Framework:** [Next.js](https://nextjs.org/) (with Turbopack)
-* **Language:** [TypeScript](https://www.typescriptlang.org/)
-* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-* **Authentication:** [Clerk](https://clerk.com/)
-* **AI:** [Google Generative AI (Gemini)](https://ai.google.dev/)
-* **UI Components:** Radix UI, Lucide React, Framer Motion
+Perfect for developers, startups, and teams looking to accelerate their development workflow.
+
+## ✨ Features
+
+### 🤖 **AI-Powered Generation**
+- Natural language processing using Google Gemini AI
+- Intelligent schema optimization and best practices
+- Context-aware relationship detection
+
+### 🗄️ **Multi-Database Support**
+- **PostgreSQL** - Production-ready schemas
+- **MySQL** - Optimized for performance
+- **MongoDB** - Document-based structures
+- **Prisma ORM** - Type-safe database access
+
+### 📊 **Visual Diagrams**
+- Interactive Entity-Relationship diagrams
+- Mermaid.js powered visualizations
+- Export-ready formats
+
+### ⚡ **CRUD Operations**
+- Auto-generated Create, Read, Update, Delete operations
+- Optimized queries for each database type
+- Production-ready code snippets
+
+### 🎨 **Modern Interface**
+- Clean, intuitive design
+- Real-time preview
+- Copy-to-clipboard functionality
+- Download generated files
+
+## 📸 Screenshots
+
+### Main Dashboard
+```
+┌─────────────────────────────────────────────────────────────┐
+│ QueryBuild - AI Database Schema Generator                   │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  📝 Describe your database:                                │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │ "An e-commerce platform with users, products,      │   │
+│  │  orders, and inventory management..."              │   │
+│  └─────────────────────────────────────────────────────┘   │
+│                    [🚀 Generate Schema]                     │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Generated Output
+```
+┌─────────────────────────────────────────────────────────────┐
+│ 📊 ER Diagram    │ 🛠️ CRUD    │ 🐘 PostgreSQL │ 🗃️ Prisma │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  ┌─────────┐    ┌─────────┐    ┌─────────┐                │
+│  │  Users  │────│ Orders  │────│Products │                │
+│  │ - id    │    │ - id    │    │ - id    │                │
+│  │ - name  │    │ - total │    │ - name  │                │
+│  │ - email │    │ - date  │    │ - price │                │
+│  └─────────┘    └─────────┘    └─────────┘                │
+│                                                             │
+│              [📋 Copy]  [⬇️ Download]                       │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Code Output Preview
+```
+┌─────────────────────────────────────────────────────────────┐
+│ Generated PostgreSQL Schema                                 │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  CREATE TABLE users (                                       │
+│    id SERIAL PRIMARY KEY,                                   │
+│    name VARCHAR(255) NOT NULL,                              │
+│    email VARCHAR(255) UNIQUE NOT NULL,                      │
+│    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP           │
+│  );                                                         │
+│                                                             │
+│  CREATE TABLE products (                                    │
+│    id SERIAL PRIMARY KEY,                                   │
+│    name VARCHAR(255) NOT NULL,                              │
+│    price DECIMAL(10,2) NOT NULL,                            │
+│    ...                                                      │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Next.js 15** - React framework with App Router
+- **TypeScript 5** - Type-safe development
+- **Tailwind CSS 4** - Utility-first styling
+- **Framer Motion** - Smooth animations
+- **Radix UI** - Accessible components
+
+### Backend & AI
+- **Google Gemini AI** - Natural language processing
+- **Clerk Authentication** - Secure user management
+- **Mermaid.js** - Diagram generation
+
+### Development
+- **Turbopack** - Ultra-fast bundler
+- **ESLint** - Code quality
+- **Prettier** - Code formatting
 
 ## 🚀 Getting Started
 
-To get a local copy up and running, follow these simple steps.
-
 ### Prerequisites
 
-Make sure you have Node.js (version 18.17.0 or higher) and a package manager (npm, yarn, or pnpm) installed on your machine.
+Ensure you have the following installed:
+- **Node.js** ≥ 18.17.0
+- **npm**, **yarn**, or **pnpm**
 
 ### Installation
 
-1.  **Clone the repository:**
-    ```sh
-    git clone [https://github.com/your_username/querybuild.git](https://github.com/your_username/querybuild.git)
-    cd querybuild
-    ```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/querybuild.git
+   cd querybuild
+   ```
 
-2.  **Install dependencies:**
-    ```sh
-    npm install
-    # or
-    yarn install
-    # or
-    pnpm install
-    ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or  
+   pnpm install
+   ```
 
-3.  **Set up environment variables:**
-    Create a `.env.local` file in the root of your project and add your API keys:
+3. **Environment Setup**
+   
+   Create `.env.local` in the root directory:
+   ```env
+   # Clerk Authentication
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_xxxxxxxx
+   CLERK_SECRET_KEY=sk_test_xxxxxxxx
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/main
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/main
 
-    ```env
-    # Clerk Authentication
-    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-    CLERK_SECRET_KEY=your_clerk_secret_key
-    NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-    NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/main
-    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/main
+   # Google Generative AI
+   GEMINI_API_KEY=your_gemini_api_key_here
+   ```
 
-    # Google Generative AI
-    GEMINI_API_KEY=your_gemini_api_key
-    ```
-    *You can get your Clerk keys from the [Clerk Dashboard](https://dashboard.clerk.com/).*
-    *You can get your Gemini API key from the [Google AI Studio](https://aistudio.google.com/app/apikey).*
+   **Get your API keys:**
+   - 🔐 [Clerk Dashboard](https://dashboard.clerk.com/)
+   - 🤖 [Google AI Studio](https://aistudio.google.com/app/apikey)
 
-4.  **Run the development server:**
-    ```bash
-    npm run dev
-    ```
+4. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-## Usage
+## 📖 Usage
 
-1.  Navigate to the main application page after signing in (`/main`).
-2.  In the input text area, describe the database you want to create. For example: *"An e-commerce platform with users, products, orders, and inventory."*
-3.  Click the "Generate Schema" button.
-4.  The application will display:
-    * An **ER Diagram** visualizing the table relationships.
-    * Tabs containing the generated code for **CRUD Operations**, **PostgreSQL**, **MySQL**, **MongoDB**, and **Prisma**.
-5.  Use the "Copy" or "Download" buttons to use the generated schemas in your own project.
+### Quick Start Guide
+
+1. **Sign In** - Create an account or sign in with existing credentials
+2. **Describe Database** - Enter your requirements in natural language
+   ```
+   Example: "A social media app with users, posts, comments, 
+   likes, and follower relationships"
+   ```
+3. **Generate** - Click "Generate Schema" and wait for AI processing
+4. **Review Output** - Examine the generated ER diagram and code
+5. **Export** - Copy code or download files for your project
+
+### Example Prompts
+
+**E-commerce Platform**
+```text
+An online store with customers, products, categories, shopping carts, 
+orders, payments, and inventory tracking
+```
+
+**Blog System**
+```text
+A blogging platform with authors, posts, categories, tags, comments, 
+and user authentication
+```
+
+**Task Management**
+```text
+A project management tool with users, projects, tasks, assignments, 
+deadlines, and progress tracking
+```
+
+## 🔧 API Reference
+
+### Schema Generation Endpoint
+
+```typescript
+POST /api/generate-schema
+
+// Request Body
+{
+  "description": "Your database description",
+  "userId": "user_id",
+  "options": {
+    "includeIndexes": true,
+    "includeTriggers": false,
+    "optimizeForRead": true
+  }
+}
+
+// Response
+{
+  "success": true,
+  "data": {
+    "erDiagram": "mermaid_diagram_code",
+    "schemas": {
+      "postgresql": "CREATE TABLE...",
+      "mysql": "CREATE TABLE...",
+      "mongodb": "db.collection...",
+      "prisma": "model User..."
+    },
+    "crudOperations": {
+      "create": "INSERT INTO...",
+      "read": "SELECT * FROM...",
+      "update": "UPDATE ... SET...",
+      "delete": "DELETE FROM..."
+    }
+  }
+}
+```
 
 ## 🤝 Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+We welcome contributions! Here's how you can help:
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+### Development Workflow
 
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
+1. **Fork** the project
+2. **Create** your feature branch
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+3. **Commit** your changes
+   ```bash
+   git commit -m 'Add amazing feature'
+   ```
+4. **Push** to the branch
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+5. **Open** a Pull Request
 
-## 📜 License
+### Contribution Guidelines
 
-Distributed under the MIT License. See `LICENSE` for more information.
+- Follow the existing code style
+- Add tests for new features
+- Update documentation as needed
+- Ensure all tests pass before submitting
 
-## 📧 Contact
+### Development Setup
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
+```bash
+# Install dependencies
+npm install
 
-Project Link: [https://github.com/your_username/querybuild](https://github.com/your_username/querybuild)
+# Run development server
+npm run dev
+
+# Run tests
+npm test
+
+# Build for production
+npm run build
+```
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+**Project Maintainer**: Ritesh Kumar Singh 
+**Project Repository**: [https://github.com/your-username/querybuild](https://github.com/neutron420/querybuild)
+
+---
 
 ## 🙏 Acknowledgments
 
-* [Vercel](https://vercel.com/) for the amazing Next.js framework.
-* [Clerk](https://clerk.dev/) for simplifying authentication.
-* [Google](https://ai.google.dev/) for the powerful Gemini API.
-* [Shadcn/ui](https://ui.shadcn.com/) for the UI components.
-* [Mermaid](https://mermaid-js.github.io/mermaid/#/) for the diagramming tool.
+Special thanks to the amazing tools and services that make QueryBuild possible:
+
+- [**Vercel**](https://vercel.com/) - Deployment and hosting platform
+- [**Google AI**](https://ai.google.dev/) - Gemini AI API
+- [**Clerk**](https://clerk.dev/) - Authentication infrastructure  
+- [**Shadcn/ui**](https://ui.shadcn.com/) - Beautiful UI components
+- [**Mermaid**](https://mermaid-js.github.io/) - Diagram generation
+- [**Radix UI**](https://www.radix-ui.com/) - Accessible primitives
+
+---
+
+<div align="center">
+
+**⭐ Star this repo if you find it helpful!**
+
+Made with ❤️ by [Your Name](https://github.com/neutron420)
+
+</div>
