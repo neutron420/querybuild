@@ -8,6 +8,7 @@ import DatabaseWithRestApi from "@/components/ui/database-with-rest-api";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { GlowingEffectDemo } from "@/components/ui/glowing-effect-demo";
 import TestimonialsConveyor from "@/components/blocks/testimonials";
+import { Footer7 } from '@/components/ui/footer-7';
 
 export default function HomePage() {
   const router = useRouter();
@@ -247,6 +248,7 @@ export default function HomePage() {
       </section>
 
       <TestimonialsConveyor />
+      <Footer7 />
     </main>
     </>
   );
