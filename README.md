@@ -55,6 +55,10 @@ Simply describe your application's data requirements in plain English, and our A
 
 <br/>
 
+</div>
+
+---
+
 ## ✨ Features
 
 ### 🤖 **AI-Powered Generation**
@@ -84,13 +88,7 @@ Simply describe your application's data requirements in plain English, and our A
 - Copy-to-clipboard functionality
 - Download generated files
 
-<br/>
-
 ---
-
-<br/>
-
-
 
 ## 🛠️ Tech Stack
 
@@ -111,11 +109,7 @@ Simply describe your application's data requirements in plain English, and our A
 🔍 **ESLint** - Code quality  
 💅 **Prettier** - Code formatting
 
-<br/>
-
 ---
-
-<br/>
 
 ## 🚀 Getting Started
 
@@ -124,8 +118,6 @@ Simply describe your application's data requirements in plain English, and our A
 Ensure you have the following installed:
 - **Node.js** ≥ 18.17.0
 - **npm**, **yarn**, or **pnpm**
-
-<br/>
 
 ### **Installation**
 
@@ -171,11 +163,7 @@ npm run dev
 
 Open **[http://localhost:3000](http://localhost:3000)** to view the application.
 
-<br/>
-
 ---
-
-<br/>
 
 ## 📖 Usage
 
@@ -194,8 +182,6 @@ likes, and follower relationships"
 **4. 📊 Review Output** - Examine the generated ER diagram and code
 
 **5. 💾 Export** - Copy code or download files for your project
-
-<br/>
 
 ### **Example Prompts**
 
@@ -217,11 +203,7 @@ A project management tool with users, projects, tasks, assignments,
 deadlines, and progress tracking
 ```
 
-<br/>
-
 ---
-
-<br/>
 
 ## 🔧 API Reference
 
@@ -262,11 +244,7 @@ POST /api/generate-schema
 }
 ```
 
-<br/>
-
 ---
-
-<br/>
 
 ## 🤝 Contributing
 
@@ -293,16 +271,12 @@ git push origin feature/amazing-feature
 
 **5. Open** a Pull Request
 
-<br/>
-
 ### **Contribution Guidelines**
 
 ✅ Follow the existing code style  
 ✅ Add tests for new features  
 ✅ Update documentation as needed  
 ✅ Ensure all tests pass before submitting
-
-<br/>
 
 ### **Development Setup**
 
@@ -320,21 +294,13 @@ npm test
 npm run build
 ```
 
-<br/>
-
 ---
-
-<br/>
 
 ## 📄 License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
-<br/>
-
 ---
-
-<br/>
 
 ## 📞 Contact
 
@@ -344,11 +310,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 **Project Repository**: [https://github.com/neutron420/querybuild](https://github.com/neutron420/querybuild)
 
-<br/>
-
 ---
-
-<br/>
 
 ## 🙏 Acknowledgments
 
@@ -356,16 +318,8 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 [**Vercel**](https://vercel.com/) • [**Google AI**](https://ai.google.dev/) • [**Clerk**](https://clerk.dev/) • [**Shadcn/ui**](https://ui.shadcn.com/) • [**Mermaid**](https://mermaid-js.github.io/) • [**Radix UI**](https://www.radix-ui.com/)
 
-<br/>
-
 ---
-
-<br/>
 
 **⭐ Star this repo if you find it helpful!**
 
 **Made with ❤️ by [Ritesh Kumar Singh](https://github.com/neutron420)**
-
-<br/>
-
-</div>
