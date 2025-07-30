@@ -1,16 +1,15 @@
- 
-    FROM node:24-alpine
+FROM node:24-alpine
 
-    WORKDIR /app
+WORKDIR /app
 
-    COPY package*.json ./
+COPY package*.json ./
 
-    RUN npm install
+RUN npm install
 
-    COPY . .
+COPY . .
 
-    RUN npm run build
+RUN npm run build
 
-    EXPOSE 3000
+EXPOSE 3000
 
-    CMD ["npm", "start"]
+CMD ["npm", "start"]

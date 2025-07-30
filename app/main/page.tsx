@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import SchemaInput from '@/components/SchemaInput';
 import ERDiagram from '@/components/ERDiagram';
 import SQLOutput from '@/components/SQLOutput';
@@ -33,12 +34,14 @@ interface ApiResponse {
 }
 
 export default function DashboardPage() {
+  const router = useRouter();
   const [apiResponse, setApiResponse] = useState<ApiResponse | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   
   // Set the default tab to 'crud'
   const [activeTab, setActiveTab] = useState('crud');
+  const [isNavigating, setIsNavigating] = useState(false);
 
   const handleSchemaGenerate = async (prompt: string) => {
     if (!prompt) return;
@@ -67,6 +70,11 @@ export default function DashboardPage() {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleGoToEditor = () => {
+    setIsNavigating(true);
+    router.push('/editor');
   };
 
   // Renders the correct output component based on the active tab
@@ -132,11 +140,22 @@ export default function DashboardPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* ER Diagram Card */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 overflow-hidden">
-            <ERDiagram 
-              schemaData={apiResponse}
-              isLoading={isLoading}
-            />
+          <div className="space-y-4">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 overflow-hidden">
+              <ERDiagram 
+                schemaData={apiResponse}
+                isLoading={isLoading}
+              />
+            </div>
+            <button
+              onClick={handleGoToEditor}
+              className="w-full bg-black text-white font-semibold py-3 px-6 rounded-xl hover:bg-gray-800 transition-colors duration-200 flex items-center justify-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+              </svg>
+              Go to ER Diagram Editor
+            </button>
           </div>
 
           {/* Tabbed Output Card */}
