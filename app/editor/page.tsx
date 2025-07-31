@@ -25,7 +25,6 @@ import ReactFlow, {
 import 'reactflow/dist/style.css';
 import { Database, Plus, Trash2, Download, Table, Save, Upload, Edit3, Key, Link, X, CheckCircle, ArrowLeft, Image, ChevronLeft, ChevronRight,  } from 'lucide-react';
 
-// --- Type Definitions ---
 type Attribute = {
   name: string;
   type: string;
@@ -42,17 +41,16 @@ type NodeDataContextType = {
   updateNodeData: (nodeId: string, data: Partial<TableNodeData>) => void;
 };
 
-// --- React Context for State Management ---
+
 const NodeDataContext = createContext<NodeDataContextType | null>(null);
 
-// --- Custom Node Component for Tables ---
 const TableNode = ({ id, data, selected }: NodeProps<TableNodeData>) => {
   const { updateNodeData } = useContext(NodeDataContext)!;
   const [tableName, setTableName] = useState(data.label);
   const [attributes, setAttributes] = useState<Attribute[]>(data.attributes);
   const [isEditingTableName, setIsEditingTableName] = useState(false);
 
-  // Sync internal state with the global state via context
+
   useEffect(() => {
     updateNodeData(id, { label: tableName, attributes });
   }, [tableName, attributes, id, updateNodeData]);
@@ -76,15 +74,13 @@ const TableNode = ({ id, data, selected }: NodeProps<TableNodeData>) => {
       const newAttributes = [...prev];
       const currentAttr = newAttributes[index];
       
-      // If we are about to SET this attribute as a primary key
+
       if (keyType === 'isPrimary' && !currentAttr.isPrimary) {
-        // Unset all other primary keys first
         newAttributes.forEach((attr, i) => {
           if (i !== index) attr.isPrimary = false;
         });
       }
-      
-      // Toggle the key for the current attribute
+
       currentAttr[keyType] = !currentAttr[keyType];
       return newAttributes;
     });
