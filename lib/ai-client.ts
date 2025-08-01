@@ -1,4 +1,3 @@
-
 import { GoogleGenerativeAI } from "@google/generative-ai";
 interface AiResponse {
   schema: unknown;
@@ -102,6 +101,29 @@ export async function generateSchema(userInput: string) {
     }
     // Re-throw the original error message if it's an Error instance.
     const errorMessage = error instanceof Error ? error.message : "An error occurred while generating the database schema.";
+    throw new Error(errorMessage);
+  }
+}
+
+// --- ADDED THIS FUNCTION ---
+export async function generateChatResponse(userInput: string): Promise<string> {
+  if (!userInput) {
+    throw new Error("User input is required.");
+  }
+
+  // A more general prompt for a helpful assistant
+  const prompt = `You are Query Build, a helpful AI assistant. Please provide a concise and helpful response to the following user query: "${userInput}"`;
+
+  try {
+    // Use the non-JSON model for plain text responses
+    const textModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const result = await textModel.generateContent(prompt);
+    const responseText = result.response.text();
+    
+    return responseText;
+  } catch (error) {
+    console.error("Error generating chat response with AI:", error);
+    const errorMessage = error instanceof Error ? error.message : "An error occurred while generating the chat response.";
     throw new Error(errorMessage);
   }
 }
