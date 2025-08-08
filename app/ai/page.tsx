@@ -28,7 +28,6 @@ export default function AiPage() {
     setIsLoading(true);
 
     try {
-      // Call the backend API you created
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -61,14 +60,11 @@ export default function AiPage() {
 
   return (
     <div className="flex flex-col h-screen bg-white">
-      {/* Header */}
       <header className="border-b border-gray-200 bg-white px-4 py-3">
         <h1 className="text-lg font-semibold text-gray-900 text-center">
           Query Build AI
         </h1>
       </header>
-
-      {/* Messages Container */}
       <main className="flex-1 overflow-y-auto bg-gray-50">
         {messages.length === 0 && (
           <div className="flex items-center justify-center h-full">
@@ -136,7 +132,6 @@ export default function AiPage() {
         )}
       </main>
 
-      {/* Input Container */}
       <div className="border-t border-gray-200 bg-white p-4">
         <div className="max-w-3xl mx-auto">
           <form onSubmit={handleSubmit} className="relative">
