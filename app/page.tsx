@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useUser, SignUpButton } from '@clerk/nextjs';
 import { HeroSection } from "@/components/blocks/hero-section-dark";
@@ -9,11 +9,26 @@ import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { GlowingEffectDemo } from "@/components/ui/glowing-effect-demo";
 import TestimonialsConveyor from "@/components/blocks/testimonials";
 import { Footer7 } from '@/components/ui/footer-7';
+import ChatWidget from '@/components/ChatWidget';
 
 export default function HomePage() {
   const router = useRouter();
   const { isSignedIn, isLoaded } = useUser();
   const [isLoading, setIsLoading] = useState(false);
+
+  // One-time popup gate: on first visit, route to /popup for 5s
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      const hasSeen = localStorage.getItem('hasSeenPopup');
+      if (!hasSeen) {
+        localStorage.setItem('hasSeenPopup', 'true');
+        router.replace('/popup');
+      }
+    } catch {
+      // ignore storage errors
+    }
+  }, [router]);
 
   const handleGetStartedClick = useCallback(() => {
     if (!isLoaded || isLoading) return;
@@ -250,6 +265,7 @@ export default function HomePage() {
       <TestimonialsConveyor />
       <Footer7 />
     </main>
+    <ChatWidget />
     </>
   );
 }

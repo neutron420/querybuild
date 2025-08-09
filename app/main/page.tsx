@@ -9,8 +9,7 @@ import PrismaOutput from '@/components/PrismaOutput';
 import MongoOutput from '@/components/MongoOutput';
 import CrudOutput from '@/components/CrudOutput';
 import { cn } from '@/lib/utils';
-
-// Define the structure for CRUD operations
+import { ArrowLeft } from 'lucide-react';
 interface CrudOperations {
   [tableName: string]: {
     create: string;
@@ -19,8 +18,6 @@ interface CrudOperations {
     delete: string;
   };
 }
-
-// Update the API response interface to include all generated schemas
 interface ApiResponse {
   schema: {
     tables: { name: string }[];
@@ -39,9 +36,7 @@ export default function DashboardPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   
-  // Set the default tab to 'crud'
   const [activeTab, setActiveTab] = useState('crud');
-  const [isNavigating, setIsNavigating] = useState(false);
 
   const handleSchemaGenerate = async (prompt: string) => {
     if (!prompt) return;
@@ -73,11 +68,8 @@ export default function DashboardPage() {
   };
 
   const handleGoToEditor = () => {
-    setIsNavigating(true);
     router.push('/editor');
   };
-
-  // Renders the correct output component based on the active tab
   const renderActiveTabContent = () => {
     if (!apiResponse && !isLoading) {
         return (
@@ -103,7 +95,6 @@ export default function DashboardPage() {
     }
   };
   
-  // Define the tabs for the UI
   const tabs = [
     { id: 'crud', label: 'CRUD Operations' },
     { id: 'postgresql', label: 'PostgreSQL' },
@@ -115,6 +106,17 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen">
       <div className="relative z-10 p-4 md:p-8 space-y-8 max-w-7xl mx-auto">
+        <div>
+          <button
+            type="button"
+            onClick={() => (window.history.length > 1 ? router.back() : router.push('/'))}
+            className="inline-flex items-center gap-2 rounded-md border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 px-3 py-1.5 shadow-sm transition-colors"
+            title="Go back"
+          >
+            <ArrowLeft size={16} />
+            <span className="text-sm">Back</span>
+          </button>
+        </div>
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-900 bg-clip-text text-transparent">
             Database Schema & Operations Designer
@@ -139,11 +141,10 @@ export default function DashboardPage() {
         )}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* ER Diagram Card */}
           <div className="space-y-4">
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 overflow-hidden">
               <ERDiagram 
-                schemaData={apiResponse}
+                schemaData={apiResponse ? { schema: { tables: (apiResponse.schema?.tables ?? []).map(t => ({ name: t.name, columns: [] })) }, diagram: apiResponse.diagram } : null}
                 isLoading={isLoading}
               />
             </div>
@@ -158,7 +159,6 @@ export default function DashboardPage() {
             </button>
           </div>
 
-          {/* Tabbed Output Card */}
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 overflow-hidden">
             <div className="p-4 sm:p-6">
               <div className="border-b border-gray-200">
