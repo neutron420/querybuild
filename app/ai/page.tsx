@@ -3,7 +3,7 @@
 import { useState, FormEvent, ChangeEvent, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { Bot, User, Send, Mic, Paperclip, Sun, Moon, Monitor, ArrowDown, Copy, ArrowLeft } from 'lucide-react';
-import ChatWidget from '@/components/ChatWidget';
+
 
 interface Message {
   text: string;

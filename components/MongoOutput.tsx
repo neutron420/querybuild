@@ -26,7 +26,7 @@ export default function MongoOutput({ isLoading, schemaData }: MongoOutputProps)
       // If it's a string, try to parse and re-stringify for pretty printing
       try {
         formattedSchema = JSON.stringify(JSON.parse(mongoDbSchema), null, 2);
-      } catch (e) {
+      } catch {
         formattedSchema = mongoDbSchema; // Fallback to the original string if it's not valid JSON
       }
     }

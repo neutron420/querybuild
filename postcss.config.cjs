@@ -1,9 +1,6 @@
-const config = {
-  plugins: ["@tailwindcss/postcss"],
-};
-
-/** @type {import('tailwindcss').Config} */
+// postcss.config.cjs
 module.exports = {
+  plugins: ["@tailwindcss/postcss"],
   theme: {
     extend: {
       maxWidth: {
@@ -20,8 +17,4 @@ module.exports = {
       }
     },
   },
-}
-
-
-export default config;
-
+};

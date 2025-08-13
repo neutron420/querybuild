@@ -34,7 +34,6 @@ const DatabaseWithRestApi = ({
     second: "v2_updates"
   },
   title = "Database Integration",
-  lightColor = "#3b82f6"
 }: DatabaseWithRestApiProps) => {
   
   return (

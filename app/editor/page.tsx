@@ -19,8 +19,7 @@ import ReactFlow, {
   ReactFlowProvider,
   ReactFlowInstance,
   useReactFlow,
-  getRectOfNodes,
-  getTransformForBounds,
+  MarkerType,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import { Database, Plus, Trash2, Download, Table, Save, Upload, Edit3, Key, Link, X, CheckCircle, ArrowLeft, Image, ChevronLeft, ChevronRight,  } from 'lucide-react';
@@ -278,8 +277,7 @@ const EditorComponent = () => {
   const onExportPNG = useCallback(() => {
     if (!reactFlowInstance) return;
 
-    const nodesBounds = getRectOfNodes(nodes);
-    const transform = getTransformForBounds(nodesBounds, 1920, 1080, 0.5, 2);
+
 
     // Create a canvas element
     const canvas = document.createElement('canvas');
@@ -326,6 +324,7 @@ const EditorComponent = () => {
              showNotification('Invalid file format.', 'error');
           }
         } catch (error) {
+          console.log('Error importing files:', error);
           showNotification('Error importing file.', 'error');
         }
       };
@@ -342,6 +341,7 @@ const EditorComponent = () => {
         sessionStorage.setItem('er-diagram-flow', JSON.stringify(flow));
         showNotification('Diagram saved successfully!', 'success');
       } catch (error) {
+        console.log('Error saving diagram:', error);
         showNotification('Error saving diagram.', 'error');
       }
     }
@@ -372,8 +372,8 @@ const EditorComponent = () => {
             setViewport({ x: flow.viewport.x, y: flow.viewport.y, zoom: flow.viewport.zoom });
           }
           // Set the counter to avoid ID collisions
-          const maxId = flow.nodes.reduce((max: number, node: any) => {
-            const match = node.id.match(/table_(\d+)/);
+          const maxId = flow.nodes.reduce((max: number, node: Node) => {
+            const match = typeof node.id === 'string' && node.id.match(/table_(\d+)/);
             return match ? Math.max(max, parseInt(match[1]) + 1) : max;
           }, 0);
           tableIdCounter = maxId;
@@ -475,7 +475,8 @@ const EditorComponent = () => {
               onConnect={onConnect} onInit={setReactFlowInstance}
               onDrop={onDrop} onDragOver={onDragOver}
               onEdgeDoubleClick={(_, edge) => {
-                const newLabel = prompt('Enter relationship label:', edge.label);
+                const labelString = typeof edge.label === 'string' ? edge.label : '';
+                const newLabel = prompt('Enter relationship label:', labelString);
                 if (newLabel !== null) {
                   setEdges((eds) => eds.map(e => e.id === edge.id ? {...e, label: newLabel} : e));
                 }
@@ -483,8 +484,7 @@ const EditorComponent = () => {
               nodeTypes={nodeTypes} fitView className="bg-black"
               connectionLineStyle={{ stroke: '#60a5fa', strokeWidth: 2 }}
               defaultEdgeOptions={{
-                style: { stroke: '#9ca3af', strokeWidth: 2 },
-                markerEnd: { type: 'arrowclosed', color: '#9ca3af' }
+                markerEnd: { type: MarkerType.ArrowClosed, color: '#9ca3af' }
               }}
             >
               <Controls className="react-flow__controls-custom"/>
